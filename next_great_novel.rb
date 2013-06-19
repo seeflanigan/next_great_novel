@@ -17,14 +17,14 @@ class Human
     @life = 100
   end
 
-  def give_life
+  def give_life!
     @life - 1
   end
 end
 
 class Vampire
   def feed!(prey)
-    life += prey.give_life
+    life += prey.give_life!
   end
 end
 
