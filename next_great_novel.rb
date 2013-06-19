@@ -36,13 +36,13 @@ class HumanTest < MiniTest::Unit::TestCase
 
     it 'dies at 0 life' do
       human = Human.new
-      human.life.times {|h| h.give_life }
+      human.life.times {|h| human.give_life! }
       human.dead?.must_equal true
     end
 
     it 'gives life' do
       human = Human.new
-      human.give_life
+      human.give_life!
       human.life.must_equal 99
     end
   end
